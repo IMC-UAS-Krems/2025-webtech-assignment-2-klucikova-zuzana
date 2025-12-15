@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="deccription" content="This is a charity website that lets people purches items for a pet shelter." />
+    <meta name="keywords" content="pet shelter, charity" />
+    <meta name="author" content="Zuzana Klucikova" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Assingment1</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" id="company_name">Good Paw</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button class="nav-link active" onclick="display_products()">Products</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link active" onclick="display_shopping_cart()">Cart (<span id="number_of_items">0</span>)</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro_section"> <!--Introduction-->
+        <div class="container" id="intro_container">
+          <div class="intro_text">
+            <h1>Small purcheses. Big impact.</h1>
+            <p>
+              One bag of food. One toy. One bed. Each item brings comfort 
+              and care to pets waiting for a second chance. Your purchase 
+              helps shelters provide daily essentials, reduce overcrowding, 
+              and give animals the love and security they deserve while they 
+              wait for a forever home. 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="product_section" class="container my-5"> <!--Products-->
+        <h2>Products that support pet shelters</h2>
+        <div class="container" id="cards_container">
+          <div id="product_layout" class="row">
+
+            <div class="card product_1" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\dry_dog_food.jpeg" class="card-img-top product_image" alt="Product 1" />
+                <h5 class="card-title">Dry dog food 8kg</h5>
+                <p class="card-text">35€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+        
+            <div class="card product_2" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\wet_dog_food.jpeg" class="card-img-top product_image" alt="Product 2" />
+                <h5 class="card-title">Wet dog food 1pack</h5>
+                <p class="card-text">20€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          
+            <div class="card product_3" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\dry_cat_food.jpeg" class="card-img-top product_image" alt="Product 3" />
+                <h5 class="card-title">Dry cat food 10kg</h5>
+                <p class="card-text">25€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cartt(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          
+            <div class="card product_4" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\wet_cat_food.jpeg" class="card-img-top product_image" alt="Product 4" />
+                <h5 class="card-title">Wet cat food 1can</h5>
+                <p class="card-text">2€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          
+            <div class="card product_5" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\dog_treats.jpeg" class="card-img-top product_image" alt="Product 5" />
+                <h5 class="card-title">Dog treats</h5>
+                <p class="card-text">4€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_6" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\cat_treats.jpeg" class="card-img-top product_image" alt="Product 6" />
+                <h5 class="card-title">Cat treats</h5>
+                <p class="card-text">4€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="and_add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_7" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\chew_toy.jpeg" class="card-img-top product_image" alt="Product 7" />
+                <h5 class="card-title">Chew toy</h5>
+                <p class="card-text">5€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_8" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\cat_toy.jpeg" class="card-img-top product_image" alt="Product 8" />
+                <h5 class="card-title">Cat toy</h5>
+                <p class="card-text">3€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_9" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\dog_bed.jpeg" class="card-img-top product_image" alt="Product 9" />
+                <h5 class="card-title">Dog bed</h5>
+                <p class="card-text">30€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_10" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\cat_bed.jpeg" class="card-img-top product_image" alt="Product 10" />
+                <h5 class="card-title">Cat bed</h5>
+                <p class="card-text">35€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_11" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\blanket.jpeg" class="card-img-top product_image" alt="Product 11" />
+                <h5 class="card-title">Blanket</h5>
+                <p class="card-text">10€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_12" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\food_bowl.jpeg" class="card-img-top product_image" alt="Product 12" />
+                <h5 class="card-title">Food bowl</h5>
+                <p class="card-text">5€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_13" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\Grooming_brush.jpeg" class="card-img-top product_image" alt="Product 13" />
+                <h5 class="card-title">Grooming brush</h5>
+                <p class="card-text">7€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_14" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\nail_clippers.jpeg" class="card-img-top product_image" alt="Product 14" />
+                <h5 class="card-title">Nail clippers</h5>
+                <p class="card-text">8€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="card product_15" style="width: 13rem">
+              <div class="card-body">
+                <img src="img\carrier.jpeg" class="card-img-top product_image" alt="Product 15" />
+                <h5 class="card-title">Carrier</h5>
+                <p class="card-text">45€</p>
+                <button class="btn btn-primary add-to-cart-button" onclick="add_to_cart(this)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="continue">
+              <button class="btn btn-primary continue_button" onclick="display_shopping_cart()">Continue to Cart</button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="cart_section" class="container my-5 d-none "> <!--Cart-->
+        
+        <h2>Shopping Cart</h2>
+        <div id="cart_items">
+          <p class="shopping_cart_text">Thank you for the donations!</p>
+        </div>
+        <div id="total" class="my-3">
+          <h3>Total before discount: <span id="sub_total"></span> €</h3>
+          <h3>Discount: -<span id="discount_price">0</span> €</h3>
+          <h3>Total: <span id="cart_total"></span> €</h3>
+          <button class="btn btn-primary my-3 back_to_shopping" onclick="display_products()">
+            Back to shopping 
+          </button>
+          <button id="to_checkout" class="btn btn-primary my-3" onclick="display_checkout()">
+            Checkout
+          </button>
+          
+        </div>
+      </section>
+
+      <section id="checkout_section" class="container my-5 d-none"> <!--Checkout-->
+        <h2>Checkout</h2>
+        <form id="checkout_form">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <lable class="form-lable">Full name </lable>
+              <input id="name" type="text" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <lable class="form-lable">Phone number</lable>
+              <input id="phone" type="text" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <lable class="form-lable">Email adresss</lable>
+              <input id="email" type="text" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <lable class="form-lable">ZIP code</lable>
+              <input id="zip" type="text" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <lable class="form-lable">Home adress </lable>
+              <input id="adress" type="text" class="form-control" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary my-2">Submit</button>
+        </form>
+      </section>
+
+      <section id="confirmation_section" class="container my-5 d-none"> <!--confirmation-->
+        <h2>Order Confirmation</h2>
+        <div id="confirmation_details">
+        </div>
+        <h3>Total before discount: <span id="confirmation_sub_total"></span> €</h3>
+        <h3>Discount: -<span id="confirmation_discount_price">0</span> €</h3>
+        <h3>Total: <span id="confirmation_cart_total"></span> €</h3>
+        <button id="back_to_start" class="btn btn-primary my-5" onclick="back_to_the_start()">
+          Back to shopping 
+        </button>
+      </section>
+    </main>
+
+    <footer class=" text-white py-3 mt-5 footer">
+      <div class="container text-center">
+        <small>Thank you for supporting a good cause!</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
