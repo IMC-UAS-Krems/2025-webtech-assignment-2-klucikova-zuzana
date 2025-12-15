@@ -114,9 +114,9 @@ function calculate_total(){
     discount_price = sub_total-total;
     console.log(discount_price);
 
-    document.getElementById("sub_total").textContent = sub_total;
-    document.getElementById("cart_total").textContent = total;
-    document.getElementById("discount_price").textContent = discount_price;
+    document.getElementById("sub_total").textContent = sub_total.toFixed(2);
+    document.getElementById("cart_total").textContent = total.toFixed(2);
+    document.getElementById("discount_price").textContent = discount_price.toFixed(2);
  
 }
 
