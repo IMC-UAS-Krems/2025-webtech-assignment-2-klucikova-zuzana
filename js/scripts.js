@@ -61,8 +61,6 @@ function confirmation () {
     confirmation.classList.add("confirmation");
 
     confirmation.querySelectorAll(".remove_button").forEach(btn => btn.remove());
-    document.getElementById("confirmation_details").appendChild(confirmation);
-
     document.getElementById("confirmation_details").innerHTML = "";
     document.getElementById("confirmation_details").appendChild(confirmation);
 
